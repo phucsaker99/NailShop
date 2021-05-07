@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_container"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageNail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_foreground" />
+
+        <ImageButton
+            android:id="@+id/buttonFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_favorite"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/imageNail"
+            app:layout_constraintStart_toStartOf="@+id/imageNail" />
+
+        <ImageButton
+            android:id="@+id/buttonUnFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_un_favorite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageNail"
+            app:layout_constraintStart_toStartOf="@+id/imageNail" />
+
+        <TextView
+            android:id="@+id/textNailName"
+            style="@style/CustomNameNail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            app:layout_constraintStart_toStartOf="@+id/imageNail"
+            app:layout_constraintTop_toTopOf="@+id/imageNail" />
+
+        <TextView
+            android:id="@+id/textNailDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="@+id/imageNail"
+            app:layout_constraintStart_toStartOf="@+id/imageNail"
+            app:layout_constraintTop_toBottomOf="@+id/imageNail" />
+
+        <TextView
+            android:id="@+id/textNailColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@color/black"
+            android:padding="@dimen/dp_4"
+            android:text="@string/text_color"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="@+id/textNailDescription"
+            app:layout_constraintTop_toBottomOf="@+id/textNailDescription" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipNailColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNailColor"
+            app:singleSelection="true" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipNailTag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textNailTag"
+            app:singleSelection="true" />
+
+        <TextView
+            android:id="@+id/textNailTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@color/black"
+            android:padding="@dimen/dp_4"
+            android:text="@string/text_tag"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipNailColor" />
+
+        <TextView
+            android:id="@+id/textPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:text="@string/text_price"
+            android:textColor="@color/red_berry"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="@+id/imageNail"
+            app:layout_constraintTop_toTopOf="@+id/imageNail" />
+
+        <ImageButton
+            android:id="@+id/imageShoppingNail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_shopping"
+            app:layout_constraintBottom_toBottomOf="@+id/imageNail"
+            app:layout_constraintEnd_toEndOf="@+id/imageNail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

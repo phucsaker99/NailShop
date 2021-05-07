@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/dp_4"
+    android:background="#292826"
+    android:padding="@dimen/dp_8">
+
+    <TextView
+        android:id="@+id/textNailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_16"
+        tools:text="@tools:sample/lorem"
+        android:textColor="#f9d342"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@+id/imageNail"
+        app:layout_constraintStart_toEndOf="@+id/imageNail"
+        app:layout_constraintTop_toTopOf="@+id/imageNail" />
+
+    <TextView
+        android:id="@+id/textDescriptionOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:textColor="#f9d342"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textPrice"
+        app:layout_constraintStart_toStartOf="@+id/imageNail"
+        app:layout_constraintTop_toBottomOf="@+id/imageNail"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonDelete"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="#f9d342"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDelete"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDelete"
+        tools:text="@tools:sample/lorem" />
+
+    <ImageButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:backgroundTint="#f9d342"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageNail"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:elevation="@dimen/dp_4"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
